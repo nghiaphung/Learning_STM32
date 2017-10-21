@@ -10,7 +10,7 @@ NVIC_InitTypeDef NVIC_InitStruct;
 void KHOI_TAO_GPIO (void);
 void KHOI_TAO_TIMER (void);
 void Blink_Led (void);
-
+int x = 0;
 int main (void)
 	{	
 		while(1)
@@ -47,9 +47,9 @@ int main (void)
 		// Gets PCLK1_Frequency //
 		u16 PCLK1_Frequency = RCC_ClockStatus.PCLK1_Frequency; 			
 		// Calculate pre-scaler //
-		u16 TIM1_Prescaler = PCLK1_Frequency/1000000;							  //(TIM1_Prescaler) CLK on 1 us //
+		u16 TIM1_Prescaler = ((PCLK1_Frequency/1000000)-1);							  //(TIM1_Prescaler) CLK on 1 us //
 		// setup timer's param //				
-		TIM_TimeBaseInitStruct.TIM_Period = 1000;
+		TIM_TimeBaseInitStruct.TIM_Period = (1000-1);
 		TIM_TimeBaseInitStruct.TIM_Prescaler = TIM1_Prescaler;
 		TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;
 		TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;
@@ -66,7 +66,7 @@ int main (void)
 	
 		void Blink_Led (void)
 	{
-		int x = ~x;
+		x = ~x;
 		GPIO_WriteBit(GPIOC,GPIO_Pin_13,x);		
 	}
 	

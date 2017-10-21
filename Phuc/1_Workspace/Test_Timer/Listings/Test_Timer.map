@@ -52,6 +52,20 @@ Section Cross References
     stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TI2_Config) for TI2_Config
     stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TI1_Config) for TI1_Config
     stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TIM_SelectInputTrigger) for TIM_SelectInputTrigger
+    dma_stm32f10x.o(i.DMA1_Channel1_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel1_Event) for DMA1_Channel1_Event
+    dma_stm32f10x.o(i.DMA1_Channel2_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel2_Event) for DMA1_Channel2_Event
+    dma_stm32f10x.o(i.DMA1_Channel3_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel3_Event) for DMA1_Channel3_Event
+    dma_stm32f10x.o(i.DMA1_Channel4_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel4_Event) for DMA1_Channel4_Event
+    dma_stm32f10x.o(i.DMA1_Channel5_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel5_Event) for DMA1_Channel5_Event
+    dma_stm32f10x.o(i.DMA1_Channel6_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel6_Event) for DMA1_Channel6_Event
+    dma_stm32f10x.o(i.DMA1_Channel7_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel7_Event) for DMA1_Channel7_Event
+    dma_stm32f10x.o(i.DMA_ChannelInitialize) refers to dma_stm32f10x.o(i.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    dma_stm32f10x.o(i.DMA_ChannelInitialize) refers to dma_stm32f10x.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    dma_stm32f10x.o(i.DMA_ChannelInitialize) refers to dma_stm32f10x.o(.data) for DMA1_Channel
+    dma_stm32f10x.o(i.DMA_ChannelUninitialize) refers to dma_stm32f10x.o(i.__NVIC_DisableIRQ) for __NVIC_DisableIRQ
+    dma_stm32f10x.o(i.DMA_ChannelUninitialize) refers to dma_stm32f10x.o(.data) for DMA1_Channel
+    gpio_stm32f10x.o(i.GPIO_PinConfigure) refers to gpio_stm32f10x.o(i.GPIO_GetPortClockState) for GPIO_GetPortClockState
+    gpio_stm32f10x.o(i.GPIO_PinConfigure) refers to gpio_stm32f10x.o(i.GPIO_PortClock) for GPIO_PortClock
     startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
     startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
@@ -72,20 +86,6 @@ Section Cross References
     system_stm32f10x.o(i.SetSysClock) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
     system_stm32f10x.o(i.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data) for SystemCoreClock
     system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClock) for SetSysClock
-    dma_stm32f10x.o(i.DMA1_Channel1_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel1_Event) for DMA1_Channel1_Event
-    dma_stm32f10x.o(i.DMA1_Channel2_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel2_Event) for DMA1_Channel2_Event
-    dma_stm32f10x.o(i.DMA1_Channel3_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel3_Event) for DMA1_Channel3_Event
-    dma_stm32f10x.o(i.DMA1_Channel4_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel4_Event) for DMA1_Channel4_Event
-    dma_stm32f10x.o(i.DMA1_Channel5_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel5_Event) for DMA1_Channel5_Event
-    dma_stm32f10x.o(i.DMA1_Channel6_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel6_Event) for DMA1_Channel6_Event
-    dma_stm32f10x.o(i.DMA1_Channel7_IRQHandler) refers to dma_stm32f10x.o(i.DMA1_Channel7_Event) for DMA1_Channel7_Event
-    dma_stm32f10x.o(i.DMA_ChannelInitialize) refers to dma_stm32f10x.o(i.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
-    dma_stm32f10x.o(i.DMA_ChannelInitialize) refers to dma_stm32f10x.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
-    dma_stm32f10x.o(i.DMA_ChannelInitialize) refers to dma_stm32f10x.o(.data) for DMA1_Channel
-    dma_stm32f10x.o(i.DMA_ChannelUninitialize) refers to dma_stm32f10x.o(i.__NVIC_DisableIRQ) for __NVIC_DisableIRQ
-    dma_stm32f10x.o(i.DMA_ChannelUninitialize) refers to dma_stm32f10x.o(.data) for DMA1_Channel
-    gpio_stm32f10x.o(i.GPIO_PinConfigure) refers to gpio_stm32f10x.o(i.GPIO_GetPortClockState) for GPIO_GetPortClockState
-    gpio_stm32f10x.o(i.GPIO_PinConfigure) refers to gpio_stm32f10x.o(i.GPIO_PortClock) for GPIO_PortClock
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
@@ -385,11 +385,6 @@ Removing Unused input sections from the image.
     Removing stm32f10x_tim.o(i.TIM_TimeBaseStructInit), (18 bytes).
     Removing stm32f10x_tim.o(i.TIM_UpdateDisableConfig), (24 bytes).
     Removing stm32f10x_tim.o(i.TIM_UpdateRequestConfig), (24 bytes).
-    Removing system_stm32f10x.o(.rev16_text), (4 bytes).
-    Removing system_stm32f10x.o(.revsh_text), (4 bytes).
-    Removing system_stm32f10x.o(.rrx_text), (6 bytes).
-    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (164 bytes).
-    Removing system_stm32f10x.o(.data), (20 bytes).
     Removing dma_stm32f10x.o(.rev16_text), (4 bytes).
     Removing dma_stm32f10x.o(.revsh_text), (4 bytes).
     Removing dma_stm32f10x.o(.rrx_text), (6 bytes).
@@ -406,6 +401,11 @@ Removing Unused input sections from the image.
     Removing gpio_stm32f10x.o(i.GPIO_GetPortClockState), (152 bytes).
     Removing gpio_stm32f10x.o(i.GPIO_PinConfigure), (120 bytes).
     Removing gpio_stm32f10x.o(i.GPIO_PortClock), (316 bytes).
+    Removing system_stm32f10x.o(.rev16_text), (4 bytes).
+    Removing system_stm32f10x.o(.revsh_text), (4 bytes).
+    Removing system_stm32f10x.o(.rrx_text), (6 bytes).
+    Removing system_stm32f10x.o(i.SystemCoreClockUpdate), (164 bytes).
+    Removing system_stm32f10x.o(.data), (20 bytes).
 
 216 unused section(s) (total 9393 bytes) removed from the image.
 
@@ -422,10 +422,10 @@ Image Symbol Table
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
@@ -435,8 +435,8 @@ Image Symbol Table
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
@@ -444,8 +444,8 @@ Image Symbol Table
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
@@ -453,10 +453,10 @@ Image Symbol Table
     ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
@@ -748,7 +748,7 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000000ec   Data   RO         1225    RESET               startup_stm32f10x_md.o
+    0x08000000   0x08000000   0x000000ec   Data   RO         1417    RESET               startup_stm32f10x_md.o
     0x080000ec   0x080000ec   0x00000008   Code   RO         1472  * !!!main             c_w.l(__main.o)
     0x080000f4   0x080000f4   0x00000034   Code   RO         1629    !!!scatter          c_w.l(__scatter.o)
     0x08000128   0x08000128   0x0000001c   Code   RO         1631    !!handler_zi        c_w.l(__scatter_zi.o)
@@ -794,7 +794,7 @@ Memory Map of the image
     0x08000160   0x08000160   0x00000004   Code   RO         1552    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
     0x08000164   0x08000164   0x00000006   Code   RO         1553    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0800016a   0x0800016a   0x00000002   PAD
-    0x0800016c   0x0800016c   0x00000040   Code   RO         1226  * .text               startup_stm32f10x_md.o
+    0x0800016c   0x0800016c   0x00000040   Code   RO         1418  * .text               startup_stm32f10x_md.o
     0x080001ac   0x080001ac   0x00000006   Code   RO         1470    .text               c_w.l(heapauxi.o)
     0x080001b2   0x080001b2   0x0000004a   Code   RO         1490    .text               c_w.l(sys_stackheap_outer.o)
     0x080001fc   0x080001fc   0x00000012   Code   RO         1492    .text               c_w.l(exit.o)
@@ -805,32 +805,32 @@ Memory Map of the image
     0x08000226   0x08000226   0x00000000   Code   RO         1574    .text               c_w.l(indicate_semi.o)
     0x08000226   0x08000226   0x00000002   PAD
     0x08000228   0x08000228   0x00000018   Code   RO            4    i.Blink_Led         main.o
-    0x08000240   0x08000240   0x00000002   Code   RO         1279    i.DMA1_Channel1_Event  dma_stm32f10x.o
+    0x08000240   0x08000240   0x00000002   Code   RO         1226    i.DMA1_Channel1_Event  dma_stm32f10x.o
     0x08000242   0x08000242   0x00000002   PAD
-    0x08000244   0x08000244   0x0000001c   Code   RO         1280    i.DMA1_Channel1_IRQHandler  dma_stm32f10x.o
-    0x08000260   0x08000260   0x00000002   Code   RO         1281    i.DMA1_Channel2_Event  dma_stm32f10x.o
+    0x08000244   0x08000244   0x0000001c   Code   RO         1227    i.DMA1_Channel1_IRQHandler  dma_stm32f10x.o
+    0x08000260   0x08000260   0x00000002   Code   RO         1228    i.DMA1_Channel2_Event  dma_stm32f10x.o
     0x08000262   0x08000262   0x00000002   PAD
-    0x08000264   0x08000264   0x0000001c   Code   RO         1282    i.DMA1_Channel2_IRQHandler  dma_stm32f10x.o
-    0x08000280   0x08000280   0x00000002   Code   RO         1283    i.DMA1_Channel3_Event  dma_stm32f10x.o
+    0x08000264   0x08000264   0x0000001c   Code   RO         1229    i.DMA1_Channel2_IRQHandler  dma_stm32f10x.o
+    0x08000280   0x08000280   0x00000002   Code   RO         1230    i.DMA1_Channel3_Event  dma_stm32f10x.o
     0x08000282   0x08000282   0x00000002   PAD
-    0x08000284   0x08000284   0x0000001c   Code   RO         1284    i.DMA1_Channel3_IRQHandler  dma_stm32f10x.o
-    0x080002a0   0x080002a0   0x00000002   Code   RO         1285    i.DMA1_Channel4_Event  dma_stm32f10x.o
+    0x08000284   0x08000284   0x0000001c   Code   RO         1231    i.DMA1_Channel3_IRQHandler  dma_stm32f10x.o
+    0x080002a0   0x080002a0   0x00000002   Code   RO         1232    i.DMA1_Channel4_Event  dma_stm32f10x.o
     0x080002a2   0x080002a2   0x00000002   PAD
-    0x080002a4   0x080002a4   0x0000001c   Code   RO         1286    i.DMA1_Channel4_IRQHandler  dma_stm32f10x.o
-    0x080002c0   0x080002c0   0x00000002   Code   RO         1287    i.DMA1_Channel5_Event  dma_stm32f10x.o
+    0x080002a4   0x080002a4   0x0000001c   Code   RO         1233    i.DMA1_Channel4_IRQHandler  dma_stm32f10x.o
+    0x080002c0   0x080002c0   0x00000002   Code   RO         1234    i.DMA1_Channel5_Event  dma_stm32f10x.o
     0x080002c2   0x080002c2   0x00000002   PAD
-    0x080002c4   0x080002c4   0x0000001c   Code   RO         1288    i.DMA1_Channel5_IRQHandler  dma_stm32f10x.o
-    0x080002e0   0x080002e0   0x00000002   Code   RO         1289    i.DMA1_Channel6_Event  dma_stm32f10x.o
+    0x080002c4   0x080002c4   0x0000001c   Code   RO         1235    i.DMA1_Channel5_IRQHandler  dma_stm32f10x.o
+    0x080002e0   0x080002e0   0x00000002   Code   RO         1236    i.DMA1_Channel6_Event  dma_stm32f10x.o
     0x080002e2   0x080002e2   0x00000002   PAD
-    0x080002e4   0x080002e4   0x0000001c   Code   RO         1290    i.DMA1_Channel6_IRQHandler  dma_stm32f10x.o
-    0x08000300   0x08000300   0x00000002   Code   RO         1291    i.DMA1_Channel7_Event  dma_stm32f10x.o
+    0x080002e4   0x080002e4   0x0000001c   Code   RO         1237    i.DMA1_Channel6_IRQHandler  dma_stm32f10x.o
+    0x08000300   0x08000300   0x00000002   Code   RO         1238    i.DMA1_Channel7_Event  dma_stm32f10x.o
     0x08000302   0x08000302   0x00000002   PAD
-    0x08000304   0x08000304   0x0000001c   Code   RO         1292    i.DMA1_Channel7_IRQHandler  dma_stm32f10x.o
+    0x08000304   0x08000304   0x0000001c   Code   RO         1239    i.DMA1_Channel7_IRQHandler  dma_stm32f10x.o
     0x08000320   0x08000320   0x0000000a   Code   RO          345    i.GPIO_WriteBit     stm32f10x_gpio.o
-    0x0800032a   0x0800032a   0x00000008   Code   RO         1233    i.SetSysClock       system_stm32f10x.o
+    0x0800032a   0x0800032a   0x00000008   Code   RO         1425    i.SetSysClock       system_stm32f10x.o
     0x08000332   0x08000332   0x00000002   PAD
-    0x08000334   0x08000334   0x000000e0   Code   RO         1234    i.SetSysClockTo72   system_stm32f10x.o
-    0x08000414   0x08000414   0x00000060   Code   RO         1236    i.SystemInit        system_stm32f10x.o
+    0x08000334   0x08000334   0x000000e0   Code   RO         1426    i.SetSysClockTo72   system_stm32f10x.o
+    0x08000414   0x08000414   0x00000060   Code   RO         1428    i.SystemInit        system_stm32f10x.o
     0x08000474   0x08000474   0x00000022   Code   RO          703    i.TIM_GetITStatus   stm32f10x_tim.o
     0x08000496   0x08000496   0x00000002   PAD
     0x08000498   0x08000498   0x00000018   Code   RO            7    i.main              main.o
@@ -847,8 +847,8 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000        -       0x00000060   Zero   RW         1501    .bss                c_w.l(libspace.o)
-    0x20000060        -       0x00000200   Zero   RW         1224    HEAP                startup_stm32f10x_md.o
-    0x20000260        -       0x00000400   Zero   RW         1223    STACK               startup_stm32f10x_md.o
+    0x20000060        -       0x00000200   Zero   RW         1416    HEAP                startup_stm32f10x_md.o
+    0x20000260        -       0x00000400   Zero   RW         1415    STACK               startup_stm32f10x_md.o
 
 
 ==============================================================================

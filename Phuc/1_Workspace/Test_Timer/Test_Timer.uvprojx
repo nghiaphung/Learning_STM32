@@ -488,6 +488,12 @@
           <targetInfo name="Timer"/>
         </targetInfos>
       </file>
+      <file attr="config" category="source" name="FileSystem\Config\FS_Config.c" version="6.2.0">
+        <instance index="0" removed="1">RTE\File_System\FS_Config.c</instance>
+        <component Cbundle="MDK-Pro" Cclass="File System" Cgroup="CORE" Cvariant="SFN" Cvendor="Keil" Cversion="6.9.8" condition="CMSIS Core with RTOS and File System I/O"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.1"/>
+        <targetInfos/>
+      </file>
     </files>
   </RTE>
 

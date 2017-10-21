@@ -8,11 +8,39 @@ RCC_ClocksTypeDef RCC_ClockStatus; 							// RCC_ClocksStatus: pointer to an RCC
 TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;	
 NVIC_InitTypeDef NVIC_InitStruct;
 void KHOI_TAO_GPIO (void);
+void KHOI_TAO_TIMER (void);
 void Blink_Led (void);
-void Button_Led (void);
-u8 ReadValue = 0; 
 
 int main (void)
+	{	
+		while(1)
+			{	
+				if (TIM_GetITStatus(TIM1,TIM_IT_Update) == SET)
+				{
+					Blink_Led();
+				}
+			}
+	}
+		void KHOI_TAO_GPIO (void)
+	{
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE); // Khoi dong clock cho Port C
+		GPIO_InitTypeDef GPIOC_InitStructure;									// Khoi tao khai bao GPIO
+		GPIOC_InitStructure.GPIO_Pin = GPIO_Pin_13;						// Khai bao la chan so 13
+		GPIOC_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		// Khai bao toc do la 50Mhz
+		GPIOC_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;			// Khai bao o che do Output Push-Pull
+		GPIO_Init(GPIOC,&GPIOC_InitStructure);								// Khoi tao GPIOC theo nhu da khai bao 
+	
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE); // Khoi dong clock cho Port C
+		GPIO_InitTypeDef GPIOA_InitStructure;									// Khoi tao khai bao GPIO
+		GPIOA_InitStructure.GPIO_Pin = GPIO_Pin_0;						// Khai bao la chan so 0
+		GPIOA_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		// Khai bao toc do la 50Mhz
+		GPIOA_InitStructure.GPIO_Mode = GPIO_Mode_IPU	;				// Khai bao o che do Input Push-up
+		GPIO_Init(GPIOA,&GPIOA_InitStructure);								// Khoi tao GPIOA theo nhu da khai bao 
+	}		
+	
+	
+
+	void KHOI_TAO_TIMER (void)
 	{
 		// Get clock status //
 		RCC_GetClocksFreq(&RCC_ClockStatus);												
@@ -32,30 +60,14 @@ int main (void)
 		NVIC_InitStruct.NVIC_IRQChannel = TIM1_CC_IRQn;
 		NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
 		NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 2;
-		NVIC_Init(&NVIC_InitStruct);							
-				
-		while(1)
-			{	
-				
-				}
-		}
-	
-		void KHOI_TAO_GPIO (void)
-	{
-		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE); // Khoi dong clock cho Port C
-		GPIO_InitTypeDef GPIOC_InitStructure;									// Khoi tao khai bao GPIO
-		GPIOC_InitStructure.GPIO_Pin = GPIO_Pin_13;						// Khai bao la chan so 13
-		GPIOC_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		// Khai bao toc do la 50Mhz
-		GPIOC_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;			// Khai bao o che do Output Push-Pull
-		GPIO_Init(GPIOC,&GPIOC_InitStructure);								// Khoi tao GPIOC theo nhu da khai bao 
-	
-		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE); // Khoi dong clock cho Port C
-		GPIO_InitTypeDef GPIOA_InitStructure;									// Khoi tao khai bao GPIO
-		GPIOA_InitStructure.GPIO_Pin = GPIO_Pin_0;						// Khai bao la chan so 0
-		GPIOA_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;		// Khai bao toc do la 50Mhz
-		GPIOA_InitStructure.GPIO_Mode = GPIO_Mode_IPU	;				// Khai bao o che do Input Push-up
-		GPIO_Init(GPIOA,&GPIOA_InitStructure);								// Khoi tao GPIOA theo nhu da khai bao 
+		NVIC_Init(&NVIC_InitStruct);
 	}
-
-		
-		
+	
+	
+		void Blink_Led (void)
+	{
+		int x = ~x;
+		GPIO_WriteBit(GPIOC,GPIO_Pin_13,x);		
+	}
+	
+	

@@ -13,13 +13,15 @@ int main (void)
 		
 		while(1)
 			{	
-				// Cho ngat //
+				;// Cho ngat //
 			}
 	}
 
 	
 	void TIM1_UP_IRQHandler (void)
 	{
+		if (TIM_GetITStatus(TIM1,TIM_IT_Update) == SET)
+			{
 				if (0x01 == GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13))
 					{
 						GPIO_WriteBit(GPIOC, GPIO_Pin_13, Bit_RESET);
@@ -28,6 +30,7 @@ int main (void)
 					{
 					GPIO_WriteBit(GPIOC, GPIO_Pin_13, Bit_SET);
 					}
+				}
 				TIM_ClearITPendingBit(TIM1,TIM_IT_Update);								
 	}		
 			
@@ -44,13 +47,13 @@ int main (void)
 void KHOI_TAO_TIMER (void)
 {
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1,ENABLE);
-    RCC_ClocksTypeDef RCC_ClockStatus; 							// RCC_ClocksStatus: pointer to an RCC_ClocksTypeDef structure //
+    RCC_ClocksTypeDef RCC_ClockStatus;	// RCC_ClocksStatus: pointer to an RCC_ClocksTypeDef structure //
     // Get clock status //
     RCC_GetClocksFreq(&RCC_ClockStatus);												
     // Gets PCLK1_Frequency //
-    uint16_t PCLK1_Frequency = RCC_ClockStatus.PCLK1_Frequency; 			
+    uint16_t PCLK2_Frequency = RCC_ClockStatus.PCLK2_Frequency; 			
     // Calculate pre-scaler //
-    uint16_t TIM1_Prescaler = ((PCLK1_Frequency/1000000)-1);							  //(TIM1_Prescaler) CLK on 1 us //
+    uint16_t TIM1_Prescaler = ((PCLK2_Frequency/1000000)-1); //(TIM1_Prescaler) CLK on 1 us //
     // setup timer's param //
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;		
     TIM_TimeBaseInitStruct.TIM_Period = (1000-1);
@@ -60,6 +63,8 @@ void KHOI_TAO_TIMER (void)
     TIM_TimeBaseInitStruct.TIM_RepetitionCounter = 0;
     TIM_TimeBaseInit(TIM1,&TIM_TimeBaseInitStruct);
     TIM_ITConfig(TIM1, TIM_IT_Update, ENABLE);
+		// Start TIM1
+		TIM_Cmd(TIM1, ENABLE);
     //  initialize NVIC //
     NVIC_InitTypeDef NVIC_InitStruct;
     NVIC_InitStruct.NVIC_IRQChannel = TIM1_UP_IRQn;

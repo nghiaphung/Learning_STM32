@@ -14,7 +14,9 @@ void checktimmer (void){
 		else{
 			GPIO_SetBits(GPIOA,GPIO_Pin_0);
 		}
+	
 	}
+	TIM_ClearITPendingBit(TIM1, TIM_IT_Update);
 }
 int main (){
 	

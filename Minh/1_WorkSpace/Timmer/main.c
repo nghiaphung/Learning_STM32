@@ -20,7 +20,6 @@ int main (){
 	
 	GPIO_initt();
 	Timmer_Init();
-	checktimmer();
 	GPIO_SetBits(GPIOA,GPIO_Pin_0);
 	statusled=GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_0);
 	while(1){

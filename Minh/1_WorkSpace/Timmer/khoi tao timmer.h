@@ -1,0 +1,1 @@
+void Timmer_Init (void);

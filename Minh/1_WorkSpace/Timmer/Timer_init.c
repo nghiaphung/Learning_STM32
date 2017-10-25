@@ -21,6 +21,7 @@ void Timmer_Init(void){
 		TIM_TimeBaseInitStruct.TIM_RepetitionCounter = 0;
 		TIM_TimeBaseInit(TIM1,&TIM_TimeBaseInitStruct);
 		TIM_ITConfig(TIM1, TIM_IT_Update, ENABLE);
+		TIM_Cmd(TIM1,ENABLE); // Enable TIM1
 		//  initialize NVIC //
 		NVIC_InitTypeDef NVIC_InitStruct;
 		NVIC_InitStruct.NVIC_IRQChannel = TIM1_CC_IRQn;

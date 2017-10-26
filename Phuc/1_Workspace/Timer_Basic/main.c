@@ -55,13 +55,13 @@ void Init_TIMER (void)
     RCC_ClocksTypeDef RCC_ClockStatus;	// RCC_ClocksStatus: pointer to an RCC_ClocksTypeDef structure //
     // Get clock status //
     RCC_GetClocksFreq(&RCC_ClockStatus);												
-    // Gets PCLK1_Frequency //
-    uint16_t PCLK2_Frequency = RCC_ClockStatus.PCLK2_Frequency; 			
+//    // Gets PCLK1_Frequency //
+//    uint32_t PCLK2_Frequency = RCC_ClockStatus.PCLK2_Frequency; 			
     // Calculate pre-scaler //
-    uint16_t TIM1_Prescaler = ((PCLK2_Frequency/1000000)-1); //(TIM1_Prescaler) CLK on 1 us //
+    uint16_t TIM1_Prescaler = ((RCC_ClockStatus.PCLK2_Frequency/10000)-1); // = 7199 ~ 10 ms; Do dem bat dau tu 0 //
     // setup timer's param //
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;		
-    TIM_TimeBaseInitStruct.TIM_Period = (1000-1);
+    TIM_TimeBaseInitStruct.TIM_Period = (10000-1); // 9999 ~ 10000*100us = 1s; Do dem bat dau tu 0 //
     TIM_TimeBaseInitStruct.TIM_Prescaler = TIM1_Prescaler;
     TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;
     TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;

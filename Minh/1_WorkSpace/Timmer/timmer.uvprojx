@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>project 1</OutputName>
+          <OutputName>timmer</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -358,7 +358,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>1</umfTarg>
+            <umfTarg>0</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -381,39 +381,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>GPIO_Initt.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\GPIO_Initt.h</FilePath>
-            </File>
-            <File>
-              <FileName>GPIO_Initt.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\GPIO_Initt.c</FilePath>
-            </File>
-            <File>
-              <FileName>blinkled.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\blinkled.h</FilePath>
-            </File>
-            <File>
               <FileName>blinkled.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\blinkled.c</FilePath>
-            </File>
-            <File>
-              <FileName>buttonled.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\buttonled.c</FilePath>
-            </File>
-            <File>
-              <FileName>buttonled.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\buttonled.h</FilePath>
             </File>
             <File>
               <FileName>buttonblinkled.c</FileName>
@@ -421,19 +391,49 @@
               <FilePath>.\buttonblinkled.c</FilePath>
             </File>
             <File>
+              <FileName>buttonled.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\buttonled.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO_Initt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\GPIO_Initt.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Timer_init.c</FilePath>
+            </File>
+            <File>
+              <FileName>blinkled.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\blinkled.h</FilePath>
+            </File>
+            <File>
               <FileName>buttonblinkled.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\buttonblinkled.h</FilePath>
             </File>
             <File>
-              <FileName>khoi tao timmer.h</FileName>
+              <FileName>buttonled.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\khoi tao timmer.h</FilePath>
+              <FilePath>.\buttonled.h</FilePath>
             </File>
             <File>
-              <FileName>khoi tao timmer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\khoi tao timmer.c</FilePath>
+              <FileName>GPIO_Initt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\GPIO_Initt.h</FilePath>
+            </File>
+            <File>
+              <FileName>Timer_init.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Timer_init.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -481,12 +481,6 @@
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="RCC" Cvendor="Keil" Cversion="3.5.0" condition="STM32F1xx STDPERIPH">
-        <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.2.0"/>
-        <targetInfos>
-          <targetInfo name="Target 1"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="RTC" Cvendor="Keil" Cversion="3.5.0" condition="STM32F1xx STDPERIPH">
         <package name="STM32F1xx_DFP" schemaVersion="1.4.0" url="http://www.keil.com/pack/" vendor="Keil" version="2.2.0"/>
         <targetInfos>
           <targetInfo name="Target 1"/>

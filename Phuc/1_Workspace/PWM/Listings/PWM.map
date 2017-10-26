@@ -679,9 +679,9 @@ Image Symbol Table
     TIM_OC1Init                              0x080004f9   Thumb Code   132  stm32f10x_tim.o(i.TIM_OC1Init)
     TIM_OC1PreloadConfig                     0x08000591   Thumb Code    18  stm32f10x_tim.o(i.TIM_OC1PreloadConfig)
     TIM_TimeBaseInit                         0x080005a5   Thumb Code   122  stm32f10x_tim.o(i.TIM_TimeBaseInit)
-    main                                     0x08000649   Thumb Code   296  main_pwm.o(i.main)
-    Region$$Table$$Base                      0x08000784   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080007a4   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x08000649   Thumb Code   190  main_pwm.o(i.main)
+    Region$$Table$$Base                      0x08000718   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000738   Number         0  anon$$obj.o(Region$$Table)
     Tim_Period                               0x20000000   Data           4  main_pwm.o(.data)
     Duty_Cycle                               0x20000004   Data           4  main_pwm.o(.data)
     Brightness                               0x20000008   Data           4  main_pwm.o(.data)
@@ -696,9 +696,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000007b0, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00000744, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000007a4, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000738, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -770,23 +770,23 @@ Memory Map of the image
     0x08000590   0x08000590   0x00000012   Code   RO          764    i.TIM_OC1PreloadConfig  stm32f10x_tim.o
     0x080005a2   0x080005a2   0x00000002   PAD
     0x080005a4   0x080005a4   0x000000a4   Code   RO          803    i.TIM_TimeBaseInit  stm32f10x_tim.o
-    0x08000648   0x08000648   0x0000013c   Code   RO            4    i.main              main_pwm.o
-    0x08000784   0x08000784   0x00000020   Data   RO         1485    Region$$Table       anon$$obj.o
+    0x08000648   0x08000648   0x000000d0   Code   RO            4    i.main              main_pwm.o
+    0x08000718   0x08000718   0x00000020   Data   RO         1485    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080007a4, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000738, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080007a4   0x0000000c   Data   RW            5    .data               main_pwm.o
+    0x20000000   0x08000738   0x0000000c   Data   RW            5    .data               main_pwm.o
 
 
-    Execution Region ER_ZI (Exec base: 0x2000000c, Load base: 0x080007b0, Size: 0x00000664, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x2000000c, Load base: 0x08000744, Size: 0x00000664, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x2000000c        -       0x00000060   Zero   RW         1359    .bss                c_w.l(libspace.o)
-    0x2000006c   0x080007b0   0x00000004   PAD
+    0x2000006c   0x08000744   0x00000004   PAD
     0x20000070        -       0x00000200   Zero   RW         1274    HEAP                startup_stm32f10x_md.o
     0x20000270        -       0x00000400   Zero   RW         1273    STACK               startup_stm32f10x_md.o
 
@@ -798,15 +798,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       316         20          0         12          0     236406   main_pwm.o
-        64         26        236          0       1536        820   startup_stm32f10x_md.o
+       208         18          0         12          0     236214   main_pwm.o
+        64         26        236          0       1536        812   startup_stm32f10x_md.o
        278          0          0          0          0       2080   stm32f10x_gpio.o
         64         12          0          0          0       1210   stm32f10x_rcc.o
        358         62          0          0          0       3286   stm32f10x_tim.o
-       328         28          0          0          0       1989   system_stm32f10x.o
+       328         28          0          0          0       1957   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      1410        148        268         12       1536     245791   Object Totals
+      1302        146        268         12       1536     245559   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          0          0          0   (incl. Padding)
 
@@ -855,15 +855,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1688        164        268         12       1636     245695   Grand Totals
-      1688        164        268         12       1636     245695   ELF Image Totals
-      1688        164        268         12          0          0   ROM Totals
+      1580        162        268         12       1636     245463   Grand Totals
+      1580        162        268         12       1636     245463   ELF Image Totals
+      1580        162        268         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1956 (   1.91kB)
+    Total RO  Size (Code + RO Data)                 1848 (   1.80kB)
     Total RW  Size (RW Data + ZI Data)              1648 (   1.61kB)
-    Total ROM Size (Code + RO Data + RW Data)       1968 (   1.92kB)
+    Total ROM Size (Code + RO Data + RW Data)       1860 (   1.82kB)
 
 ==============================================================================
 
